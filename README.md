@@ -1,6 +1,4 @@
-🐍 Descripción del repositorio
-
-Nombre del repositorio: python
+Hecho por: Angel Blazquez Jimenez
 
 Para este repositorio recomiendo descagarse varias extensiones:
 
