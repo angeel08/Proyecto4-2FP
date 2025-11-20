@@ -1,0 +1,11 @@
+ID;Nombre;Apellido;Edad;Email;Ciudad;Fecha de registro
+1;Carlos;Gómez;34;carlos.gomez@example.com;Madrid;2023-01-15
+2;Lucía;Martínez;28;lucia.martinez@example.com;Barcelona;2023-02-10
+3;Miguel;Rodríguez;45;miguel.rodriguez@example.com;Valencia;2023-03-05
+4;Ana;López;31;ana.lopez@example.com;Sevilla;2023-04-20
+5;Javier;Fernández;39;javier.fernandez@example.com;Bilbao;2023-05-18
+6;Sofía;Sánchez;26;sofia.sanchez@example.com;Zaragoza;2023-06-12
+7;David;Ramírez;52;david.ramirez@example.com;Málaga;2023-07-01
+8;Elena;Torres;29;elena.torres@example.com;Granada;2023-08-22
+9;Pablo;Jiménez;41;pablo.jimenez@example.com;Alicante;2023-09-30
+10;Laura;Moreno;36;laura.moreno@example.com;Valladolid;2023-10-14
