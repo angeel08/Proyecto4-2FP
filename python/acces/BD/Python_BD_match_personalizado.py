@@ -84,7 +84,7 @@ match respuesta:
             filtrar_d_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
             cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes") # podemos filtrar con esta linea
         else:
-            print("\nVale, pues no filtramos, aqui tienes todo relacionado con el Edad: ")
+            print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Edad: ")
 
     case "E":
         print("Has elegido por Email")
@@ -112,7 +112,7 @@ match respuesta:
             filtrar_f_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
             cursor.execute(f"\nSELECT {filtrar_f_por} FROM clientes") # podemos filtrar con esta linea
         else:
-            print("\nVale, pues no filtramos, aqui tienes todo relacionado con el Ciudad: ")
+            print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Ciudad: ")
         
 
 
