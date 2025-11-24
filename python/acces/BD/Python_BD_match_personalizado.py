@@ -39,7 +39,8 @@ match respuesta:
 
         if filtrar_a == "S":
             filtrar_a_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_a_por} FROM clientes") # podemos filtrar con esta linea
+            cursor.execute(f"\nSELECT {filtrar_a_por} FROM clientes WHERE id = {ID_usuario}") # podemos filtrar con esta linea
+            # al filtrar, si el usuario nos pide un ID en concreto deberemos añadir "WHERE id = {ID_usuario}", esto solo pasa cuando la consulta hay numeros (INT)
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el ID: ")
 
@@ -82,7 +83,7 @@ match respuesta:
 
         if filtrar_d == "S":
             filtrar_d_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes") # podemos filtrar con esta linea
+            cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes WHERE Edad = {Edad_usuario}") # podemos filtrar con esta linea
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Edad: ")
 
