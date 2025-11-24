@@ -1,7 +1,7 @@
 import pyodbc
 
 #al tener este proyecto compartido en Github, tenemos varias rutas en cada equipo (en casa y en clase)
-db_file = r'C:\Users\Gigabyte\Desktop\proyectos\Proyecto4 - clase 2º\python\acces\empresa.accdb' #en casa
+db_file = r'C:\Users\Gigabyte\Desktop\proyectos\Proyecto4 - clase 2º\python\acces\BD\base_datos\empresa.accdb' #en casa
 #db_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\empresa.accdb' #en clase
 
 conn_str = (
@@ -12,6 +12,7 @@ conn_str = (
 # conexión a la B.D.
 conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
+
 def menu():
     print("---- MENU ----")
     print("A = Por ID")
@@ -39,12 +40,8 @@ match respuesta:
 
         if filtrar_a == "S":
             filtrar_a_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-<<<<<<< HEAD
-            cursor.execute(f"SELECT {filtrar_a_por} FROM clientes WHERE id = {ID_usuario}") # podemos filtrar con esta linea
-=======
             cursor.execute(f"\nSELECT {filtrar_a_por} FROM clientes WHERE id = {ID_usuario}") # podemos filtrar con esta linea
             # al filtrar, si el usuario nos pide un ID en concreto deberemos añadir "WHERE id = {ID_usuario}", esto solo pasa cuando la consulta hay numeros (INT)
->>>>>>> d349b09f396d5ef98a7e810427afb64f0e991289
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el ID: ")
 
@@ -59,7 +56,8 @@ match respuesta:
 
         if filtrar_b == "S":
             filtrar_b_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_b_por} FROM clientes WHERE Nombre = {nombre_usuario}") 
+            cursor.execute(f"SELECT {filtrar_b_por} FROM clientes WHERE Nombre = '{nombre_usuario}'")
+ 
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el Nombre: ")
 
@@ -73,7 +71,7 @@ match respuesta:
 
         if filtrar_c == "S":
             filtrar_c_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_c_por} FROM clientes") 
+            cursor.execute(f"\nSELECT {filtrar_c_por} FROM clientes WHERE Apellido = '{Apellido_usuario}'") 
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el Apellido: ")
 
@@ -87,11 +85,7 @@ match respuesta:
 
         if filtrar_d == "S":
             filtrar_d_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-<<<<<<< HEAD
-            cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes") 
-=======
-            cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes WHERE Edad = {Edad_usuario}") # podemos filtrar con esta linea
->>>>>>> d349b09f396d5ef98a7e810427afb64f0e991289
+            cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes WHERE Edad = '{Edad_usuario}'") # podemos filtrar con esta linea
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Edad: ")
 
@@ -119,7 +113,7 @@ match respuesta:
 
         if filtrar_f == "S":
             filtrar_f_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_f_por} FROM clientes") 
+            cursor.execute(f"\nSELECT {filtrar_f_por} FROM clientes WHERE Ciudad = '{ciudad_usuario}'") 
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Ciudad: ")
         
