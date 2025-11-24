@@ -9,6 +9,9 @@ conn_str = (
     f'DBQ={db_file};'
 )
 
+#le pedimos al usuario una ciudad:
+ciudad_usuario = input("Dame una ciuadad: ")
+
 #hamemos la consulta
 print("Indique los campos a mostrar: ")
 print("1. Nombre y apellido")
@@ -19,26 +22,22 @@ print("Cualquier letra = sale del programa")
 
 opcion = input("ELija una opcion: ")
 
-#consulta = "SELECT " # PONEMOS EL ESPACIO DESPUES DEL select 
+consulta = "SELECT " # PONEMOS EL ESPACIO DESPUES DEL select 
 match opcion:
     case '1':
-        consulta = "SELECT nombre, apellido FROM clientes"
-        #consulta = consulta + "nombre, apellido" #Como pongas estas lineas tal que asi: consulta = consulta + " nombre, apellido" te da error
+        consulta = consulta + "Nombre, Apellido" #Como pongas estas lineas tal que asi: consulta = consulta + " nombre, apellido" te da error
     case '2':
-        consulta = "SELECT nombre, apellido, ciudad FROM clientes"
-        #consulta = consulta + "Nombre, Apellido, Ciudad"
+        consulta = consulta + "Nombre, Apellido, Ciudad"
     case '3':
-        consulta = "SELECT nombre, apellido, email FROM clientes"
-        #consulta = consulta + "Nombre, Apellido, Email"
+        consulta = consulta + "Nombre, Apellido, Email"
     case '4':
-        consulta = "SELECT * FROM clientes"
-        #consulta = consulta + "*"
+        consulta = consulta + "*"
     case _:
         print("lo siento.... saliendo del programa")
         exit()
         
 
-#consulta = consulta + " FROM clientes" # como solucion puede poner el espacio antes del FROM clientes
+consulta = consulta + f" FROM clientes WHERE Ciudad = {ciudad_usuario}" # como solucion puede poner el espacio antes del FROM clientes
 
 # conexión a la B.D.
 conn = pyodbc.connect(conn_str)
