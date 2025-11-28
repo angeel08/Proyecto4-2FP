@@ -1,8 +1,10 @@
 import pyodbc
+from tabulate import tabulate
+
 
 #al tener este proyecto compartido en Github, tenemos varias rutas en cada equipo (en casa y en clase)
 db_file = r'C:\Users\Gigabyte\Desktop\proyectos\Proyecto4 - clase 2º\python\acces\empresa.accdb' #en casa
-#db_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\empresa.accdb' #en clase
+db_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\BD\base_datos\empresa.accdb' #en clase
 
 conn_str = (
     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
@@ -39,15 +41,12 @@ match respuesta:
 
         if filtrar_a == "S":
             filtrar_a_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-<<<<<<< HEAD
-            cursor.execute(f"SELECT {filtrar_a_por} FROM clientes WHERE id = {ID_usuario}") # podemos filtrar con esta linea
-=======
             cursor.execute(f"\nSELECT {filtrar_a_por} FROM clientes WHERE id = {ID_usuario}") # podemos filtrar con esta linea
             # al filtrar, si el usuario nos pide un ID en concreto deberemos añadir "WHERE id = {ID_usuario}", esto solo pasa cuando la consulta hay numeros (INT)
->>>>>>> d349b09f396d5ef98a7e810427afb64f0e991289
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el ID: ")
-
+            registros = cursor.fetchall()
+            print(tabulate(registros, headers=["id","Nombre","Apellido","Edad", "Email", "Ciudad", "Fecha_de_registro"], tablefmt="fancy_grid")) #debe de tener fecha de registro
         
     case "B":
         print("Has elegido por nombre")
@@ -87,11 +86,7 @@ match respuesta:
 
         if filtrar_d == "S":
             filtrar_d_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-<<<<<<< HEAD
-            cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes") 
-=======
             cursor.execute(f"\nSELECT {filtrar_d_por} FROM clientes WHERE Edad = {Edad_usuario}") # podemos filtrar con esta linea
->>>>>>> d349b09f396d5ef98a7e810427afb64f0e991289
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Edad: ")
 
