@@ -43,11 +43,13 @@ match respuesta:
         if filtrar_a == "S":
             filtrar_a_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
             cursor.execute(f"\nSELECT {filtrar_a_por} FROM clientes WHERE id = {ID_usuario}") # podemos filtrar con esta linea
+            registros_a = cursor.fetchall()
+            print(tabulate(registros_a, headers=[str(filtrar_a_por)], tablefmt="fancy_grid"))
             # al filtrar, si el usuario nos pide un ID en concreto deberemos añadir "WHERE id = {ID_usuario}", esto solo pasa cuando la consulta hay numeros (INT)
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el ID: ")
-            registros = cursor.fetchall()
-            print(tabulate(registros, headers=["id","Nombre","Apellido","Edad", "Email", "Ciudad", "Fecha_de_registro"], tablefmt="fancy_grid")) #debe de tener fecha de registro
+            registros_a_no = cursor.fetchall()
+            print(tabulate(registros_a_no, headers=["id","Nombre","Apellido","Edad", "Email", "Ciudad", "Fecha_de_registro"], tablefmt="fancy_grid")) #debe de tener fecha de registro
         
     case "B":
         print("Has elegido por nombre")
