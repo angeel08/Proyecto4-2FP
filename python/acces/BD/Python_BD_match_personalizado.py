@@ -1,5 +1,5 @@
 import pyodbc
-from tabulate import tabulate
+from tabulate import tabulate # si nos aperece una advertencia, deberemos instalar el modulo "tabulate"
 
 
 #al tener este proyecto compartido en Github, tenemos varias rutas en cada equipo (en casa y en clase)
@@ -14,6 +14,7 @@ conn_str = (
 # conexión a la B.D.
 conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
+
 def menu():
     print("---- MENU ----")
     print("A = Por ID")
@@ -58,7 +59,8 @@ match respuesta:
 
         if filtrar_b == "S":
             filtrar_b_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_b_por} FROM clientes WHERE Nombre = {nombre_usuario}") 
+            cursor.execute(f"SELECT {filtrar_b_por} FROM clientes WHERE Nombre = '{nombre_usuario}'")
+ 
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el Nombre: ")
 
@@ -72,7 +74,7 @@ match respuesta:
 
         if filtrar_c == "S":
             filtrar_c_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_c_por} FROM clientes") 
+            cursor.execute(f"\nSELECT {filtrar_c_por} FROM clientes WHERE Apellido = '{Apellido_usuario}'") 
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con el Apellido: ")
 
@@ -114,7 +116,7 @@ match respuesta:
 
         if filtrar_f == "S":
             filtrar_f_por = input("\n¿Por que quieres filtrar? (si quieres filtrar ponlo bien y separado por comas ','): ")
-            cursor.execute(f"\nSELECT {filtrar_f_por} FROM clientes") 
+            cursor.execute(f"\nSELECT {filtrar_f_por} FROM clientes WHERE Ciudad = '{ciudad_usuario}'") 
         else:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Ciudad: ")
         
