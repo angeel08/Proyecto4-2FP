@@ -48,8 +48,9 @@ Contenido principal:
 → notas del profesor
 
     .\ej4(angel_blazquez).py 
-    
-→ ejemplos y prácticas de clase, en este caso es uno de los ejercicios mas largos que hemos realizado en clase
 
+MEJOR EJERCICIO:
 
-Autor: @bedez159 -- Ángel Blázquez Jiménez
+    .\Python_BD_match_personalizado.py
+
+Autor: @angeel08 y @bedez159 --> Ángel Blázquez Jiménez
