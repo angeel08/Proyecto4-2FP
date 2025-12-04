@@ -38,7 +38,6 @@ match opcion:
         
 
 consulta = consulta + f" FROM clientes WHERE Ciudad = {ciudad_usuario}" # como solucion puede poner el espacio antes del FROM clientes
-
 # conexión a la B.D.
 conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()

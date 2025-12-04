@@ -14,7 +14,9 @@ conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
 #hamemos la consulta
-consulta = "SELECT * FROM clientes"
+consulta = "SELECT * FROM clientes WHERE ID"
+
+
 
 cursor.execute(consulta)
 resultados = cursor.fetchall()

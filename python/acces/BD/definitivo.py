@@ -15,7 +15,6 @@ cursor = conn.cursor()
 #DESARROLLO DEL PROGRAMA
 consulta = "SELECT * FROM clientes"
 
-
 #EJECUCION DEL PROGRMA
 cursor.execute(consulta)
 resultados=cursor.fetchall()
