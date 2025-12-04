@@ -1,7 +1,7 @@
 import pyodbc
 
 #Ponemos la ruta de la base de datos
-db_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\empresa.accdb' 
+db_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\BD\base_datos\empresa.accdb' 
 
 conn_str = (
     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
