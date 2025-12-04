@@ -1,6 +1,7 @@
 import pyodbc
 
 db_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\BD\base_datos\empresa.accdb' #en clase
+db_file = r'C:\Users\Gigabyte\Desktop\proyectos\Proyecto4 - clase 2º\python\acces\BD\base_datos\empresa.accdb' #en casa
 
 
 conn_str = (
@@ -18,7 +19,7 @@ consulta = "SELECT * FROM clientes"
 cursor.execute(consulta)
 resultados = cursor.fetchall()
 
-print(f"Se encontraron {len(resultados)} registros")
+"""print(f"Se encontraron {len(resultados)} registros")"""
 
 if resultados:
     for row in resultados:
