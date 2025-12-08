@@ -145,8 +145,9 @@ match respuesta:
             print("\nVale, pues no filtramos, aqui tienes todo relacionado con la Ciudad: ")
             registros_f = cursor.fetchall()
             print(tabulate(registros_f, headers=["id", "Nombre", "Apellido", "Edad", "Email", "Ciudad", "Fecha_de_registro"], tablefmt="fancy_grid"))
-
-
+    case _:
+        print("SALIENDO DEL PROGRAMA.......")
+        exit()
 # cerrar el cursor y la conexión
 cursor.close()
 conn.close()
