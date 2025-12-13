@@ -23,24 +23,24 @@ cursor.execute(f"SELECT * FROM Tabla1 WHERE Nombre = '{Nombre}' AND Contraseña 
 
 resultado = cursor.fetchone()
 
+
 if resultado:
     print("✔ Inicio de sesión exitoso")
 else:
     print("✘ Usuario o contraseña incorrectos")
     peticion = input("\n¿Quieres inscribirte? (S/n)").upper()
     if peticion == "S":
-        # Nombre a insertar
-        nuevo_nombre = input("Dame el nomrbe: ")
-        nueva_contraseña = int(input("Dame una contraseña: "))
-        # Consulta SQL para insertar el nombre
-        insertar_nombre = f"INSERT INTO Tabla1 {Nombre}, {Contraseña} VALUES ?"
+        nuevo_nombre = input("Dame el nombre: ")
+        nueva_contraseña = getpass.getpass("Dame una contraseña: ")
 
         try:
-            cursor.execute(f"{insertar_nombre}, {nuevo_nombre,}, {nueva_contraseña,}") # Pasa el nombre y la contraseña como una tupla
-            conn.commit() # Guarda los cambios
-            print(f"Nombre '{nuevo_nombre}' insertado correctamente.")
+            cursor.execute("INSERT INTO Tabla1 (Nombre, Contraseña) VALUES (?, ?)", (nuevo_nombre, nueva_contraseña))
+            conn.commit()
+            print("usuario registrado correctamente")
         except:
-            print(f"Error al insertar el nombre: {exit()}")
+            print("Error al insertaR ")
+            exit()
+
     else:
         print("Vale, pues hasta luego...")
 
