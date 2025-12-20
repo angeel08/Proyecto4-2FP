@@ -64,7 +64,7 @@ def recoger_respuesta():
 def comprobar_respuesta(resp):
     if resp in opciones:
         return True
-    print("❌ Opción no válida.")
+    print("Opción no válida.")
     return False
 
 # ---- PROGRAMA PRINCIPAL ----
