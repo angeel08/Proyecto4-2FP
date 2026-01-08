@@ -2,6 +2,7 @@ import pyodbc
 import getpass
 
 lg_file = r'C:\Users\Gigabyte\Desktop\proyectos\Proyecto4 - clase 2º\python\acces\LG\base_datos\Database1.accdb'
+lg_file = r'C:\Users\angel.blajim\Proyecto4-2FP\python\acces\LG\base_datos\Database1.accdb'
 
 conn_str = (
     r'DRIVER={Microsoft Access Driver (*.mdb, *.accdb)};'
