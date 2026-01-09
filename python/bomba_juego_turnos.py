@@ -31,7 +31,7 @@ def palabra_valida(palabra, silabas):
     return True
 
 
-print("\n💣 BOMBA DE LAS SÍLABAS 💣")
+print("\n------ BOMBA DE LAS SÍLABAS -----")
 
 num_jugadores = int(input("Número de jugadores: "))
 jugadores = []
@@ -46,7 +46,7 @@ turno = 0
 
 while len(jugadores) > 1:
     jugador = jugadores[turno % len(jugadores)]
-    print(f"\n👉 TURNO DE {jugador}")
+    print(f"\nTURNO DE {jugador}")
 
     silabas_juego = random.sample(silabas, random.choice([1, 2]))
     tiempo_limite = random.randint(5, 10)
@@ -59,17 +59,17 @@ while len(jugadores) > 1:
     fin = time.time()
 
     if fin - inicio > tiempo_limite:
-        print("💥 BOOOM (fuera de tiempo)")
+        print("BOOOM (fuera de tiempo)")
         jugadores.remove(jugador)
 
     elif not palabra_valida(palabra, silabas_juego):
-        print("💥 BOOOM (palabra inválida)")
+        print("BOOOM (palabra inválida)")
         jugadores.remove(jugador)
 
     else:
-        print("✅ Sigue vivo")
+        print("Sigue vivo")
 
     turno += 1
 
 
-print(f"\n🏆 GANADOR: {jugadores[0]}")
+print(f"\nGANADOR: {jugadores[0]}")
