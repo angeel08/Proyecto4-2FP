@@ -16,7 +16,7 @@ consulta = "SELECT max(ID) FROM clientes_insertar" #sumo uno mas
 cursor.execute(consulta)
 resultado = cursor.fetchone()
 
-#pedimos datos
+#PEDIMOS LOS DATOS QUE QUEREMOS INSERTAR EN LA BASE DE DATOS
 nombre = input("Ingrese el nombre: ")
 apellido = input("Ingrese el apellido: ")
 edad = int(input("Ingrese la edad: "))
@@ -28,7 +28,7 @@ conn.commit()
 #DESARROLLO DEL PROGRAMA
 consulta = "SELECT * FROM clientes_insertar"
 
-#EJECUCION DEL PROGRMA  
+#EJECUCION DEL PROGRAMA  
 cursor.execute(consulta)
 resultados=cursor.fetchall()
 
