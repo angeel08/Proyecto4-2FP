@@ -11,7 +11,7 @@ conn_str = (
 conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
-#SUMAR A EL ULTIMO id UNO MAS
+#SUMAR A EL ULTIMO id UNO MAS 
 consulta = "SELECT max(ID) FROM clientes_insertar" #sumo uno mas 
 cursor.execute(consulta)
 resultado = cursor.fetchone()
