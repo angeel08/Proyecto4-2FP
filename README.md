@@ -14,7 +14,10 @@ Para este repositorio recomiendo descagarse varias extensiones:
 4º -> Python: 
 
     https://marketplace.visualstudio.com/items?itemName=ms-python.python
-    
+5º -> Docx/ODT:
+
+    https://marketplace.visualstudio.com/items?itemName=ShahilKumar.docxreader
+
 La 1º extension es para ver los apuntes adjuntados a los ejercicios, que en ellos habra explicaciones de cada ejercicio 
 
 La 2º extension es para mantener tus archivos Python limpios y consistentes, asegurando que todos los import estén ordenados correctamente.
@@ -23,7 +26,9 @@ La 2º extension es para mantener tus archivos Python limpios y consistentes, as
 La 3º extension es para escribir código Python de mayor calidad, más rápido y con menos errores, al entender profundamente la estructura y los tipos de tu proyecto.
 ![all-features](https://github.com/user-attachments/assets/2ed31ad0-046a-4429-b49e-85e4ea24cdb6)
 
-Y la Ultima extension (4º) es la extension que convierte a Visual Studio Code en un entorno de desarrollo Python completo.
+La 4º extension es la extension que convierte a Visual Studio Code en un entorno de desarrollo Python completo.
+
+La ultima extension es para mostrar el contenido de cualquier fichero word desde visual studio code.
 
 Repositorio creado para guardar y compartir mis apuntes, ejercicios y proyectos de clase de programación en Python.
 
