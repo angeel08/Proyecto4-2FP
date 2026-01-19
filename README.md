@@ -5,32 +5,36 @@ Para este repositorio recomiendo descagarse varias extensiones:
 1º -> PDF Viewer: 
 
     https://marketplace.visualstudio.com/items?itemName=mathematic.vscode-pdf
+
+Esta extension sirve para ver los apuntes adjuntados a los ejercicios, que en ellos habra explicaciones de cada ejercicio
+
 2º -> isort: 
 
     https://marketplace.visualstudio.com/items?itemName=ms-python.isort
+
+Esta 2º extension es para mantener tus archivos Python limpios y consistentes, asegurando que todos los import estén ordenados correctamente.
+![vscode-isort](https://github.com/user-attachments/assets/7d87fdda-b136-4c7f-9a3e-8ff04428a60d)
+
 3º -> Pylance: 
     
     https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance
+
+Esta 3º extension es para escribir código Python de mayor calidad, más rápido y con menos errores, al entender profundamente la estructura y los tipos de tu proyecto.
+![all-features](https://github.com/user-attachments/assets/2ed31ad0-046a-4429-b49e-85e4ea24cdb6)
 4º -> Python: 
 
     https://marketplace.visualstudio.com/items?itemName=ms-python.python
+
+Esta 4º extension es la extension que convierte a Visual Studio Code en un entorno de desarrollo Python completo.
+
 5º -> Docx/ODT:
 
     https://marketplace.visualstudio.com/items?itemName=ShahilKumar.docxreader
 
-La 1º extension es para ver los apuntes adjuntados a los ejercicios, que en ellos habra explicaciones de cada ejercicio 
 
-La 2º extension es para mantener tus archivos Python limpios y consistentes, asegurando que todos los import estén ordenados correctamente.
-![vscode-isort](https://github.com/user-attachments/assets/7d87fdda-b136-4c7f-9a3e-8ff04428a60d)
+Esta ultima extension es para mostrar el contenido de cualquier fichero word desde visual studio code.
 
-La 3º extension es para escribir código Python de mayor calidad, más rápido y con menos errores, al entender profundamente la estructura y los tipos de tu proyecto.
-![all-features](https://github.com/user-attachments/assets/2ed31ad0-046a-4429-b49e-85e4ea24cdb6)
-
-La 4º extension es la extension que convierte a Visual Studio Code en un entorno de desarrollo Python completo.
-
-La ultima extension es para mostrar el contenido de cualquier fichero word desde visual studio code.
-
-Repositorio creado para guardar y compartir mis apuntes, ejercicios y proyectos de clase de programación en Python.
+Este Repositorio creado para guardar y compartir mis apuntes, ejercicios y proyectos de clase de programación en Python.
 
 Aquí encontrarás:
 
