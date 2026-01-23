@@ -30,10 +30,10 @@ if cliente:
     edad = int(input("Nueva edad: "))
     ciudad = input("Nueva ciuadad: ")
 
-    sql = "UPDATE clientes SET edad=?, email=?, ciudad=? WHERE id=?"
-    params = (edad, email, ciudad, ID_buscar)
+    """sql = "DELETE FROM clientes WHERE id=?"
+    params = (edad, email, ciudad, ID_buscar)"""
 
-    cursor.execute(sql, params)
+    cursor.execute("DELETE FROM clientes WHERE id=?", ID_buscar)
     conn.commit()
 
     mostrar(cliente) #error sin resolver => no se actualiza los datos guardados
