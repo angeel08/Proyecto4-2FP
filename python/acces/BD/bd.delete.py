@@ -12,7 +12,7 @@ conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
 #pedir id del cliente
-ID_buscar = int(input("Dime tu id: ")) 
+ID_buscar = int(input("Dime tu id, PARA BORRARLO: ")) 
 
 #ver toda la informacion del usuario
 cursor.execute("SELECT * FROM clientes WHERE id=?", (ID_buscar,))
@@ -25,18 +25,14 @@ def mostrar(cliente):
 
 if cliente:
     mostrar(cliente)
-
-    email = input("Nuevo email: ")
-    edad = int(input("Nueva edad: "))
-    ciudad = input("Nueva ciuadad: ")
-
-    """sql = "DELETE FROM clientes WHERE id=?"
-    params = (edad, email, ciudad, ID_buscar)"""
-
-    cursor.execute("DELETE FROM clientes WHERE id=?", ID_buscar)
-    conn.commit()
-
-    mostrar(cliente) #error sin resolver => no se actualiza los datos guardados
+    
+    borrar = input("Seguro que lo quieres BORRAR (S/n):").upper()
+    if borrar == "S":
+        cursor.execute("DELETE FROM clientes WHERE id=?", ID_buscar)
+        conn.commit()
+        print("Ya estan borrados tus datos :(")
+    else:
+        print("Vale... Mejor no borramos")
 else:
     print("EROR......")
 
