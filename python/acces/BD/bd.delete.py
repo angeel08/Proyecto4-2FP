@@ -11,21 +11,21 @@ conn_str = (
 conn = pyodbc.connect(conn_str)
 cursor = conn.cursor()
 
+#funcion de mostrar los datos del cliente
+def mostrar(cliente):
+    print("\n----- TUS DATOS -----")
+    print(cliente)
+
 #pedir id del cliente
 ID_buscar = int(input("Dime tu id, PARA BORRARLO: ")) 
 
 #ver toda la informacion del usuario
-cursor.execute("SELECT * FROM clientes WHERE id=?", (ID_buscar,))
+cursor.execute("SELECT * FROM clientes WHERE id=?", (ID_buscar))
 cliente = cursor.fetchone()
-
-#funcion de mostrar los datos del cliente
-def mostrar(cliente):
-    print("\n ----- TUS DATOS -----")
-    print(cliente)
 
 if cliente:
     mostrar(cliente)
-    
+
     borrar = input("Seguro que lo quieres BORRAR (S/n):").upper()
     if borrar == "S":
         cursor.execute("DELETE FROM clientes WHERE id=?", ID_buscar)
