@@ -32,7 +32,15 @@ Esta 4º extension es la extension que convierte a Visual Studio Code en un ento
     https://marketplace.visualstudio.com/items?itemName=ShahilKumar.docxreader
 
 
-Esta ultima extension es para mostrar el contenido de cualquier fichero word desde visual studio code.
+Esta 5º extension es para mostrar el contenido de cualquier fichero word desde visual studio code.
+
+6º -> Error Lens:
+
+    https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens
+
+Esta ultima extension es para detectar los errores de una formas mas visual
+<img width="910" height="105" alt="image" src="https://github.com/user-attachments/assets/c85dd406-fd46-41db-8b99-4f8e7b86e187" />
+
 
 Este Repositorio creado para guardar y compartir mis apuntes, ejercicios y proyectos de clase de programación en Python.
 
