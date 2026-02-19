@@ -15,5 +15,6 @@ def habla(objeto):
 
 #definimos una lista con objetos, uno de cada clase
 mascotas = [perro(), gato(), robot()]
+
 for x in mascotas:
     habla(x)
