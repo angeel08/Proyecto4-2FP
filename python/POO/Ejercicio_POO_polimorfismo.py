@@ -10,8 +10,8 @@ class robot:
     def sonido(self):
         print("01010101010101")
 
-def habla(objeto):
-    objeto.sonido()
+def habla(x):
+    x.sonido()
 
 #definimos una lista con objetos, uno de cada clase
 mascotas = [perro(), gato(), robot()]
