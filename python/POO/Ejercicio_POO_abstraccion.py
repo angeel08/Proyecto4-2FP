@@ -1,5 +1,5 @@
 class Interruptor:
-    def __init__(self) -> None:
+    def __init__(self):
         self.__proveedor = "Iberdrola"
         self.__tipocontrato = "Domestico"
         self.__tarifa = "Estandar"

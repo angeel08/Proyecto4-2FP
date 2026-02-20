@@ -6,7 +6,7 @@ class perro:
         self.__nombre = nombre  #1º forma para encapsular: "__" 
         self.__raza = raza
         self.__color = color
-        self.edad = int(edad)
+        self.__edad = int(edad)
 
         print("---------- Creado el objeto ----------")
     
@@ -17,6 +17,14 @@ class perro:
     def color(self): #3º forma para encapsular
         return self.__color
 
+    @property
+    def edad(self): #3º forma para encapsular
+        return self.__edad
+
+#Definir lo que hace el perro
+    def mira(self):
+        print("mirar lo que hace el perro")
+        
     def ladrar(self):
         print("GUAOOO")
 
@@ -34,6 +42,7 @@ print(Rocky.get_raza()) #2º forma la CORRECTA
 print(Rocky.color) #3º forma la MEJOR
 print(Rocky.edad)
 
+Rocky.mira()
 Rocky.grunir()
 Rocky.ladrar()
 Rocky.dormir()
